@@ -14,8 +14,15 @@ function getSelectors(path) {
     }).join(" ");
 }
 
-export default function(path) {
-    if(Array.isArray(path)) {
+export default function(pathOrTarget) {  // 对象or数组
+    if(Array.isArray(pathOrTarget)) {
+        return getSelectors(pathOrTarget)
+    } else {
+        let path = [];
+        while(pathOrTarget) {
+            path.push(pathOrTarget);
+            pathOrTarget = pathOrTarget.parentNode;
+        }
         return getSelectors(path)
     }
 }
