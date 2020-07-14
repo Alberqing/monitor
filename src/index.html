@@ -16,6 +16,12 @@
         function errorClick() {
             window.someVar.error = "error";
         }
+
+        function promiseErrorClick() {
+            new Promise(function(resolve, reject) {
+                window.someVar.error = "error";
+            })
+        }
     </script>
 </body>
 </html>
