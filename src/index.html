@@ -12,7 +12,8 @@
             <input type="button" id="promsieErrBtn" value="点击抛出promise错误" onclick="promiseErrorClick()"> -->
             <!-- <input type="button" id="successBtn" value="ajax成功请求" onclick="sendSuccess()" />
             <input type="button" id="errorBtn" value="ajax失败请求" onclick="sendError()"> -->
-            ####
+            <!-- #### -->
+            <button id="clickMe" onclick="clickMe()">点我</button>
         </div>
     </div>
     <script>
@@ -47,10 +48,21 @@
         //     }
         //     xhr.send();
         // }
-        document.addEventListener("DOMContentLoaded", () => {
+        // document.addEventListener("DOMContentLoaded", () => {
+        //     let start = Date.now();
+        //     while((Date.now() - start) < 1000) {}
+        // })
+        function clickMe() {
             let start = Date.now();
-            while((Date.now() - start) < 1000) {}
-        })
+            while(start < 1000) {}
+        }
+        setTimeout(() => {
+            let h1 = document.createElement("h1");
+            h1.innerHTML = "我是页面中最有意义的内容";
+            h1.setAttribute("elementtiming", "meningful");   // 最有意义 属性名定死
+            let content = document.getElementsByClassName("content")[0];
+            content.appendChild(h1);
+        }, 2000)
     </script>
     <!-- <script src="someError.js"></script> -->
 </body>
