@@ -25,28 +25,32 @@
         //         window.someVar.error = "error";
         //     })
         // }
-        function sendSuccess() {
-            let xhr = new XMLHttpRequest;
-            xhr.open('GET', '/success', true);
-            xhr.responseType = "json";
-            xhr.onload = function() {
-                console.log(xhr.response);
-            }
-            xhr.send();
-        }
+        // function sendSuccess() {
+        //     let xhr = new XMLHttpRequest;
+        //     xhr.open('GET', '/success', true);
+        //     xhr.responseType = "json";
+        //     xhr.onload = function() {
+        //         console.log(xhr.response);
+        //     }
+        //     xhr.send();
+        // }
 
-        function sendError() {
-            let xhr = new XMLHttpRequest;
-            xhr.open('GET', '/error', true);
-            xhr.responseType = "json";
-            xhr.onload = function() {
-                console.log(xhr.response);
-            }
-            xhr.onerror = function(error) {
-                console.log(error);
-            }
-            xhr.send();
-        }
+        // function sendError() {
+        //     let xhr = new XMLHttpRequest;
+        //     xhr.open('GET', '/error', true);
+        //     xhr.responseType = "json";
+        //     xhr.onload = function() {
+        //         console.log(xhr.response);
+        //     }
+        //     xhr.onerror = function(error) {
+        //         console.log(error);
+        //     }
+        //     xhr.send();
+        // }
+        document.addEventListener("DOMContentLoaded", () => {
+            let start = Date.now();
+            while((Date.now() - start) < 1000) {}
+        })
     </script>
     <!-- <script src="someError.js"></script> -->
 </body>
